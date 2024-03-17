@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import * as glob from 'glob';
-import path, { dirname, resolve } from 'node:path';
-import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import path, { resolve } from 'node:path';
+import { ViteMinifyPlugin} from 'vite-plugin-minify'
 import htmlPurge from 'vite-plugin-purgecss';
 import handlebars from 'vite-plugin-handlebars';
-import  handlerBarsContext from 'varible.js';
+import handlerBarsContext from './variables.js';
 
 export default defineConfig({
+    base: "/portafolio-vite/",
+    appType: 'mpa',
     build: {
         rollupOptions: {
             input: Object.fromEntries(
@@ -19,13 +21,12 @@ export default defineConfig({
             ),
         },
     },
-    plugins:[
+    plugins: [
         handlebars({
-            partialDirectory: resolve(dirname, 'partials'),
-            context: handlebarsContext,
+            partialDirectory: resolve(__dirname, 'partials'),
+            context: handlerBarsContext,
         }),
         htmlPurge({}),
-        ViteMinifyPlugin({})
+        ViteMinifyPlugin({}),
     ],
-    base: "portafolio-vite-less"
 })

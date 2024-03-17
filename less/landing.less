@@ -1,169 +1,157 @@
-
-html{
-    font-family: 'Roboto', Helvetica, sans-serif;
+html {
+	font-family: 'Roboto', Helvetica, sans-serif;
 }
-
-body{
-    background-color: @background-color-main;
-    padding-left: 2rem;
+body {
+	background-color: @background-color-main;
+	padding-left: 2rem;
 }
-
-header{
-    color: @color-letras-main;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    margin: 1.5rem;
+header {
+	color: @color-letras-main;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px;
+	margin: 1.5rem;
+	h3 {
+		margin: 0px;
+		padding: 0.5rem 10rem;
+	}
+	nav {
+		margin-right: 10rem;
+		ul {
+			padding: 0px;
+			margin: 0px;
+			display: flex;
+			list-style: none;
+			li {
+				a {
+					display: inline-block;
+					padding: 0.5rem 1rem;
+					color: @color-letras-main;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 }
-
-header h3{
-    margin: 0px;
-    padding: 0.5rem 10rem;
+.container-info-general {
+	margin-top: 5rem;
+	margin-left: 20rem;
 }
-
-header nav{
-    margin-right: 10rem;
+.foto-perfil {
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-image: url(https://placehold.co/200x200);
+	background-size: cover;
+	border-radius: 50%;
 }
-
-header nav ul{
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    list-style: none;
+.biografia {
+	color: @color-letras-main;
+	margin-top: 5rem;
+	margin-left: 23rem;
+	h1 {
+		padding: 0.7rem;
+	}
+	p {
+		color: @color-letras-secondary;
+		padding: 0.7rem;
+		line-height: 2rem;
+		width: 650px;
+		text-align: justify;
+	}
 }
-
-header nav ul li a{
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: @color-letras-main;
-    text-decoration: none;
+h2 {
+	padding: 0.7rem;
 }
-
-.container-info-general{
-    margin-top: 5rem;
-    margin-left: 20rem;
+.enlaces-redes {
+	a {
+		img {
+			width: 40px;
+			height: 40px;
+			margin-left: 1rem;
+		}
+	}
 }
-
-.foto-perfil{
-    float: left;
-    width: 300px;
-    height: 300px;
-    background-image: url(../FotoPerfil.jpeg);
-    background-size: cover;
-    border-radius: 50%;
+.proyectos {
+	color: @color-letras-main;
+	padding: 5rem;
 }
-
-.biografia{
-    color: @color-letras-main;
-    margin-top: 5rem;
-    margin-left: 23rem;
+.Titulo-Proyecto {
+	margin-left: 5rem;
 }
-
-.biografia h1,h2{
-    padding: 0.7rem;
+.container-proyectos {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 20px;
+	margin-left: 2rem;
 }
-
-.biografia p{
-    color: @color-letras-secondary;
-    padding: 0.7rem;
-    line-height: 2rem;
-    width: 650px;
-    text-align: justify;
-    
+.proyecto {
+	padding: 20px;
+	margin: 10px;
+	width: 100%;
+	img {
+		align-self: auto;
+		height: auto;
+	}
 }
-
-.enlaces-redes a img{
-    width: 40px;
-    height: 40px;
-    margin-left: 1rem;
+.container-contacto {
+	display: flex;
+	color: @color-letras-main;
+	padding: 10rem;
 }
-
-.proyectos{
-    color: @color-letras-main;
-    padding: 5rem;
+.info-contacto {
+	h3 {
+		margin-left: 0.7rem;
+		padding-top: 1.5rem;
+		color: @color-letras-secondary;
+	}
 }
-
-.Titulo-Proyecto{
-    margin-left: 5rem;
+h4 {
+	margin-left: 0.7rem;
+	padding-top: 1.5rem;
+	color: @color-letras-secondary;
 }
-
-.container-proyectos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-    margin-left: 2rem;
+.formulario-contacto {
+	margin-top: 1rem;
+	margin-left: 23rem;
 }
-
-.proyecto{
-    padding: 20px;
-    margin: 10px;
-    width: 100%;
+.datos-form {
+	width: 100%;
+	display: flex;
+	gap: 1.3rem;
+	input {
+		width: 100%;
+		padding-inline: 1rem;
+		padding-block: 0.5rem;
+		border-radius: 0.6rem;
+		font-size: 15px;
+	}
 }
-
-.proyecto img {
-    align-self: auto;
-    height: auto;
+.mensaje-form {
+	margin-top: 1rem;
+	width: 100%;
+	textarea {
+		width: 100%;
+		padding-inline: 1rem;
+		padding-block: 0.5rem;
+		border-radius: 0.6rem;
+		font-size: 15px;
+	}
 }
-
-.container-contacto{
-    display: flex;
-    color: @color-letras-main;
-    padding: 10rem;
+button {
+	background-color: @colorBoton;
+	margin-top: 1rem;
+	width: 620px;
+	height: 40px;
+	border-radius: 0.6rem;
+	font-size: 15px;
+	font-weight: bold;
 }
-
-.info-contacto h3,h4{
-    margin-left: 0.7rem;
-    padding-top: 1.5rem;
-    color: @color-letras-secondary;
-}
-
-.formulario-contacto{
-    margin-top: 1rem;
-    margin-left: 23rem;
-}
-
-.datos-form{
-    width: 100%;
-    display: flex;
-    gap: 1.3rem;
-}
-
-.datos-form input{
-    width: 100%;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-    border-radius: 0.6rem;
-    font-size: 15px;
-}
-
-.mensaje-form{
-    margin-top: 1rem;
-    width: 100%;
-}
-
-.mensaje-form textarea{
-    width: 100%;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-    border-radius: 0.6rem;
-    font-size: 15px;
-}
-
-button{
-    background-color: @colorBoton;
-    margin-top: 1rem;
-    width: 620px;
-    height: 40px;
-    border-radius: 0.6rem;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.footer-container{
-    color: @color-letras-secondary;
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
+.footer-container {
+	color: @color-letras-secondary;
+	text-align: center;
+	margin-bottom: 30px;
+	width: 100%;
 }
